@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+    <link rel="stylesheet" href="/static/s.css">
+    </head>
+<body>
+  <div>
+    <img class="logo" src="/static/tianji.png">
+            <ul class="nav-menu">
+             
+              <li ><a href="/home">Home</a></li>
+                <li class="nav-item"><a href="/about">About</a></li>
+                <li class="nav-item"><a href="/contact">Data</a></li>
+                <li class="nav-item-left"><a href="/signup">Signup</a></li>
+            </ul>
+          </div>
+
+  
+
+
+
+<table class="w3-table w3-striped ex2" border='1'>
+  <tr>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Contact</th>
+    <th>Sport</th>
+    <th>Membership</th>
+    <th>Address</th>
+    <th>Update</th>
+    <th>Delete</th>
+  </tr>
+  {% for x in z %}
+    <tr>
+      <td>{{ x.name }}</td>
+      <td>{{ x.gender }}</td>
+      <td>{{ x.contact }}</td>
+      <td>{{ x.sport }}</td>
+      <td>{{ x.mem }}</td>
+      <td>{{ x.add }}</td>
+      <td bgcolor="blue"><a href="/update/{{ x.id }}">Update</a></td>
+      <td bgcolor="red"><a href="/delete/{{ x.id }}">Delete</a></td>
+    </tr>
+  {% endfor %}
+</table>
+</center>
+
+
+</body>
+</html>

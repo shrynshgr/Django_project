@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/s.css" media="screen">
+
+    <style>
+      #ff{
+        border: 14px groove #8a8080;
+        padding: 9px;
+        background-color: #00cfff;
+    
+      }
+    </style>
+   
+    
+    
+    <div>
+        <img class="logo" src="/static/tianji.png">
+                <ul class="nav-menu">
+                  <li ><a href="/home">Home</a></li>
+                    <li class="nav-item"><a href="/about">About</a></li>
+                    <li class="nav-item"><a href="/contact">Data</a></li>
+                    <li class="nav-item-left"><a href="/signup">Signup</a></li>
+                </ul>
+              </div>
+              <marquee class="marquee">*NEW YEAR OFFER.20% OFF ON ALL SPORTS SUBSCRIPTIONS*</marquee>
+            
+          
+      </div></header>
+      <body>
+      <div class="form">
+
+      <center><h1>Update Student details</h1>
+      <fieldset class="fieldset-auto-width">
+      <form id="ff" action="/updaterecord/{{ Sport.id }}/" method="post">
+      {% csrf_token %}
+      <div>
+      <label>Name</label>
+      <input type="text" name="name">
+      </div>
+      <br>
+      <div>
+      <label>Gender</label>
+      <br>
+      <input type="radio" name="gender" value="male">Male
+      <input type="radio" name="gender" value="female">Female
+      <input type="radio" name="gender" value="other">Others
+      </div>
+      <br>
+      <div>
+      <label>Contact No.</label>
+      <input type="tel"  name="contact" >
+      </div>
+      <br>
+      <div>
+      <label>SPORTS</label>
+      <select name="sport">
+      <option></option>
+      <option value="football">FOOTBALL</option>
+      <option value="cricket">CRICKET</option>
+      <option value="tennis">TENNIS</option>
+      <option value="swimming">SWIMMMING</option>
+      <option value="basketball">BASKETBALL</option>
+      </select>
+      </div>
+      <br>
+      <div>
+      <label>MEMBERSHIP TYPE:</label><br>
+      <input type="checkbox" value="monthly" name="mem">MONTHLY-Rs.1000<br>
+      <input type="checkbox" value="yearly" name="mem">YEARLY-Rs. 10000<br>
+      </div>
+      <br>
+      
+      <br><br>
+      <div>
+      <label>ADDRESS</label>
+      <textarea name="add">
+      </textarea>
+      <br><br>
+      <input type="submit" value="Submit">
+      </form>
+      </center> 
+    </div><br><br>
+    </body>
+      
+        <div class="page-end">
+            <p class="para-end"> 
+              Get Directions:<br>           
+              School Address<br>
+              Karjat Murbad Road, Wadawali,<br>
+              Tal Dist Karjat,<br>
+              Maharashtra 410201,<br>
+              Phone No. : +91-93721 80715<br>
+              AN INITIATIVE BY XYZ PVT. LTD.<br>
+            </p>
+             
+              <a class="link" href="https://www.instagram.com/" target="_blank"><img src="/static/instapnglogo.png"></a>
+              <a class="link" href="https://www.facebook.com/" target="_blank"><img src="/static/Facebook_icon-icons.com_66805.png"></a>
+              <a class="link" href="https://www.twitter.com/" target="_blank"><img src="/static/1491579542-yumminkysocialmedia22_83078.png"></a>
+              <p class="link">Follow Us On:</p>
+          
+          </div>
+        
+          
+      
+    </html>
